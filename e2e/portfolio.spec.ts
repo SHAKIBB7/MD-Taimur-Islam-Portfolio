@@ -4,7 +4,9 @@ test.describe("Portfolio", () => {
   test("home page renders hero and core sections", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(/Taimur/i);
-    await expect(page.getByRole("heading", { name: "Skills", exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Skills", exact: true }),
+    ).toBeVisible();
     await expect(page.getByRole("heading", { name: "Experience" })).toBeVisible();
   });
 

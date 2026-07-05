@@ -33,7 +33,11 @@ export function ProjectExplorer({ projects }: { projects: Project[] }) {
   return (
     <div>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by category">
+        <div
+          className="flex flex-wrap gap-2"
+          role="group"
+          aria-label="Filter by category"
+        >
           {(["ALL", ...PROJECT_CATEGORIES] as Filter[]).map((c) => (
             <button
               key={c}

@@ -5,8 +5,7 @@ import { cn } from "@/lib/utils";
 const styles = {
   base: "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50",
   primary: "bg-accent text-accent-foreground shadow-lg shadow-accent-soft",
-  secondary:
-    "border border-card-border bg-card text-foreground hover:border-accent",
+  secondary: "border border-card-border bg-card text-foreground hover:border-accent",
 } as const;
 
 type Variant = "primary" | "secondary";

@@ -49,7 +49,10 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div role="status" className="rounded-2xl border border-card-border bg-card p-8 text-center">
+      <div
+        role="status"
+        className="rounded-2xl border border-card-border bg-card p-8 text-center"
+      >
         <p className="text-lg font-semibold">Message sent ✓</p>
         <p className="mt-2 text-sm text-muted-foreground">
           Thanks for reaching out — I&apos;ll get back to you soon.

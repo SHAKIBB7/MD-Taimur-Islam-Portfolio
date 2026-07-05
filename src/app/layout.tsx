@@ -43,9 +43,7 @@ export default async function RootLayout({
     jobTitle: profile.headline,
     email: profile.email,
     address: { "@type": "PostalAddress", addressLocality: profile.location },
-    sameAs: profile.socials
-      .filter((s) => s.url.startsWith("http"))
-      .map((s) => s.url),
+    sameAs: profile.socials.filter((s) => s.url.startsWith("http")).map((s) => s.url),
     url: siteConfig.url,
   };
 

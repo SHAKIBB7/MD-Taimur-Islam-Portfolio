@@ -15,8 +15,7 @@ export function useDeviceCapability(): { enable3D: boolean; ready: boolean } {
       "(prefers-reduced-motion: reduce)",
     ).matches;
     const cores = navigator.hardwareConcurrency ?? 4;
-    const memory =
-      (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 4;
+    const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 4;
 
     let webgl = false;
     try {

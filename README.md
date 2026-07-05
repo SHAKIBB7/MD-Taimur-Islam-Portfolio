@@ -26,12 +26,12 @@ No database? The site still runs — the content service falls back to the canon
 
 ## Scripts
 
-| Script | Purpose |
-| --- | --- |
-| `npm run dev` / `build` / `start` | Develop / production build / serve |
-| `npm run lint` / `typecheck` / `format` | Code quality |
-| `npm test` / `npm run test:e2e` | Vitest unit tests / Playwright e2e |
-| `npm run db:migrate` / `db:seed` / `db:studio` | Prisma workflows |
+| Script                                         | Purpose                            |
+| ---------------------------------------------- | ---------------------------------- |
+| `npm run dev` / `build` / `start`              | Develop / production build / serve |
+| `npm run lint` / `typecheck` / `format`        | Code quality                       |
+| `npm test` / `npm run test:e2e`                | Vitest unit tests / Playwright e2e |
+| `npm run db:migrate` / `db:seed` / `db:studio` | Prisma workflows                   |
 
 Git hooks: run `npx husky init` once, then put `npx lint-staged` in `.husky/pre-commit`.
 

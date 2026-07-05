@@ -12,7 +12,8 @@ import { AchievementsList } from "@/features/achievements/achievements-list";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Resume of MD Taimur Islam — experience, education, skills, and languages.",
+  description:
+    "Resume of MD Taimur Islam — experience, education, skills, and languages.",
   alternates: { canonical: "/resume" },
 };
 

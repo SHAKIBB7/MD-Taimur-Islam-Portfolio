@@ -29,8 +29,8 @@ describe("contactSchema", () => {
   });
 
   it("caps message length to prevent abuse", () => {
-    expect(
-      contactSchema.safeParse({ ...valid, message: "x".repeat(5001) }).success,
-    ).toBe(false);
+    expect(contactSchema.safeParse({ ...valid, message: "x".repeat(5001) }).success).toBe(
+      false,
+    );
   });
 });

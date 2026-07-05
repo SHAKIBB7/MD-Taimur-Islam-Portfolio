@@ -14,8 +14,11 @@
   --card-border: oklch(90% 0.01 250);
   --accent: oklch(55% 0.2 265);
   --accent-soft: oklch(55% 0.2 265 / 0.12);
+  --accent-2: oklch(60% 0.13 220);
   --accent-foreground: oklch(98% 0.005 250);
   --ring: oklch(55% 0.2 265);
+  --success: oklch(55% 0.15 150);
+  --success-soft: oklch(55% 0.15 150 / 0.12);
 }
 
 .dark {
@@ -27,8 +30,11 @@
   --card-border: oklch(26% 0.03 265);
   --accent: oklch(75% 0.16 265);
   --accent-soft: oklch(75% 0.16 265 / 0.14);
+  --accent-2: oklch(82% 0.11 220);
   --accent-foreground: oklch(15% 0.02 265);
   --ring: oklch(75% 0.16 265);
+  --success: oklch(78% 0.17 150);
+  --success-soft: oklch(78% 0.17 150 / 0.14);
 }
 
 @theme inline {
@@ -40,8 +46,11 @@
   --color-card-border: var(--card-border);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-accent-2: var(--accent-2);
   --color-accent-foreground: var(--accent-foreground);
   --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }

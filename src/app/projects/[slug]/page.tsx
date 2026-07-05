@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }: Params) {
   ].filter((l): l is { label: string; url: string } => Boolean(l.url));
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-14 sm:py-16">
+    <article className="mx-auto w-full max-w-3xl px-6 py-10 sm:py-12">
       <Reveal>
         <Link
           href="/projects"
@@ -64,12 +64,12 @@ export default async function ProjectDetailPage({ params }: Params) {
         <p className="mt-3 text-lg text-accent">{project.tagline}</p>
       </Reveal>
 
-      <Reveal className="mt-10">
+      <Reveal className="mt-8">
         <p className="leading-relaxed text-muted-foreground">{project.description}</p>
       </Reveal>
 
       {project.features.length > 0 ? (
-        <Reveal className="mt-10">
+        <Reveal className="mt-8">
           <h2 className="mb-4 text-2xl font-semibold">Key Features</h2>
           <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
             {project.features.map((feature) => (
@@ -79,7 +79,7 @@ export default async function ProjectDetailPage({ params }: Params) {
         </Reveal>
       ) : null}
 
-      <Reveal className="mt-10">
+      <Reveal className="mt-8">
         <h2 className="mb-4 text-2xl font-semibold">Technologies</h2>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
@@ -89,7 +89,7 @@ export default async function ProjectDetailPage({ params }: Params) {
       </Reveal>
 
       {project.changelog.length > 0 ? (
-        <Reveal className="mt-10">
+        <Reveal className="mt-8">
           <h2 className="mb-4 text-2xl font-semibold">Changelog</h2>
           <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
             {project.changelog.map((entry) => (
@@ -108,7 +108,7 @@ export default async function ProjectDetailPage({ params }: Params) {
       ) : null}
 
       {links.length > 0 ? (
-        <Reveal className="mt-12 flex flex-wrap gap-4">
+        <Reveal className="mt-10 flex flex-wrap gap-4">
           {links.map((link, index) => (
             <ButtonLink
               key={link.url}

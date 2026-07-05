@@ -29,6 +29,8 @@ export type Profile = {
   phone?: string;
   avatarUrl?: string;
   resumeUrl?: string;
+  /** Short availability note shown as a badge in the hero, e.g. "Open to opportunities". */
+  availability?: string;
   socials: SocialLink[];
   languages: LanguageSkill[];
   interests: Interest[];
@@ -68,7 +70,17 @@ export type SkillCategory = (typeof SKILL_CATEGORIES)[number];
 export type Skill = {
   name: string;
   category: SkillCategory;
+  /** Proficiency 0–100; drives the level bar in the skills grid. */
+  level?: number;
 };
+
+/** Human label for a numeric skill level. */
+export function skillLevelLabel(level: number): string {
+  if (level >= 80) return "Advanced";
+  if (level >= 65) return "Proficient";
+  if (level >= 50) return "Intermediate";
+  return "Familiar";
+}
 
 export const PROJECT_CATEGORIES = [
   "WEB",

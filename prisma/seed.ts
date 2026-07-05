@@ -33,6 +33,7 @@ async function main() {
       phone: c.profile.phone,
       avatarUrl: c.profile.avatarUrl,
       resumeUrl: c.profile.resumeUrl,
+      availability: c.profile.availability,
       socials: { create: c.profile.socials },
       languages: { create: c.profile.languages },
       interests: { create: c.profile.interests },

@@ -14,7 +14,7 @@ export default async function ContactPage() {
   const profile = await getProfile();
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-14 sm:py-16">
+    <div className="mx-auto w-full max-w-5xl px-6 py-10 sm:py-12">
       <Reveal>
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-accent">
           Contact
@@ -22,13 +22,13 @@ export default async function ContactPage() {
         <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
           Let&apos;s work together
         </h1>
-        <p className="mb-10 max-w-2xl text-muted-foreground">
+        <p className="mb-8 max-w-2xl text-muted-foreground">
           Have a project, opportunity, or just want to say hello? Send a message and
           I&apos;ll get back to you.
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr]">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[2fr_1fr]">
         <Reveal>
           <ContactForm />
         </Reveal>

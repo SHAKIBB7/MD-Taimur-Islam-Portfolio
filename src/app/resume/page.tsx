@@ -22,8 +22,8 @@ export default async function ResumePage() {
     await getContent();
 
   return (
-    <div className="pb-16">
-      <div className="mx-auto w-full max-w-5xl px-6 pb-10 pt-12 sm:pt-16">
+    <div className="pb-12">
+      <div className="mx-auto w-full max-w-5xl px-6 pb-8 pt-10 sm:pt-12">
         <Reveal>
           <p className="mb-2 text-sm font-medium uppercase tracking-widest text-accent">
             Curriculum Vitae

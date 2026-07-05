@@ -49,6 +49,7 @@ async function loadFromDatabase(): Promise<PortfolioContent> {
     phone: opt(profile.phone),
     avatarUrl: opt(profile.avatarUrl),
     resumeUrl: opt(profile.resumeUrl),
+    availability: opt(profile.availability),
     socials: profile.socials.map((s) => ({
       platform: s.platform,
       label: s.label,
@@ -85,7 +86,11 @@ async function loadFromDatabase(): Promise<PortfolioContent> {
       startDate: iso(e.startDate)!,
       endDate: iso(e.endDate),
     })),
-    skills: skills.map((s) => ({ name: s.name, category: s.category })),
+    skills: skills.map((s) => ({
+      name: s.name,
+      category: s.category,
+      level: opt(s.level),
+    })),
     projects: projects.map((p): Project => ({
       slug: p.slug,
       title: p.title,

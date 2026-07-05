@@ -27,7 +27,7 @@ export function Section({
       id={id}
       aria-labelledby={`${id}-heading`}
       className={cn(
-        compact ? "py-10 sm:py-12" : "py-14 sm:py-20",
+        compact ? "py-6 sm:py-8" : "py-10 sm:py-14",
         divider && "border-t border-card-border/60",
         className,
       )}
@@ -43,7 +43,7 @@ export function Section({
             id={`${id}-heading`}
             className={cn(
               "text-3xl font-bold tracking-tight sm:text-4xl",
-              compact ? "mb-6" : "mb-8",
+              compact ? "mb-4" : "mb-6",
             )}
           >
             {title}

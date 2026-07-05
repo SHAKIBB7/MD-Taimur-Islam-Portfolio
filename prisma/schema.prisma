@@ -20,6 +20,7 @@ model Profile {
   phone       String?
   avatarUrl   String?
   resumeUrl   String?
+  availability String?
   socials     SocialLink[]
   languages   Language[]
   interests   Interest[]
@@ -89,6 +90,7 @@ model Skill {
   id        String        @id @default(cuid())
   name      String
   category  SkillCategory
+  level     Int? // proficiency 0–100, drives the level bar in the UI
   sortOrder Int           @default(0)
 }
 

@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens — the single source of truth for color, spacing and type.
+   Components consume semantic tokens (--color-*) so themes swap cleanly.
+--------------------------------------------------------------------------- */
+
+:root {
+  --background: oklch(98.5% 0.002 250);
+  --foreground: oklch(20% 0.02 260);
+  --muted: oklch(94% 0.005 250);
+  --muted-foreground: oklch(45% 0.02 260);
+  --card: oklch(100% 0 0);
+  --card-border: oklch(90% 0.01 250);
+  --accent: oklch(55% 0.2 265);
+  --accent-soft: oklch(55% 0.2 265 / 0.12);
+  --accent-foreground: oklch(98% 0.005 250);
+  --ring: oklch(55% 0.2 265);
+}
+
+.dark {
+  --background: oklch(14% 0.02 265);
+  --foreground: oklch(93% 0.01 250);
+  --muted: oklch(20% 0.025 265);
+  --muted-foreground: oklch(65% 0.02 255);
+  --card: oklch(17.5% 0.025 265);
+  --card-border: oklch(26% 0.03 265);
+  --accent: oklch(75% 0.16 265);
+  --accent-soft: oklch(75% 0.16 265 / 0.14);
+  --accent-foreground: oklch(15% 0.02 265);
+  --ring: oklch(75% 0.16 265);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus indicator everywhere */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Respect users who prefer reduced motion — WCAG 2.2 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}

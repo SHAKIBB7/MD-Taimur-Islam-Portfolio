@@ -1,6 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { contactSchema } from "@/features/contact/contact-schema";
 import { isDatabaseConfigured } from "@/lib/env";
+// import { Ratelimit } from "@upstash/ratelimit";
+// import { Redis } from "@upstash/redis";
 
 /**
  * Contact endpoint: validated with zod, rate-limited per IP,
@@ -8,6 +10,14 @@ import { isDatabaseConfigured } from "@/lib/env";
  * typed), which neutralizes injection/XSS payloads at the boundary.
  */
 
+/*
+ * In-memory rate limiting is not suitable for serverless environments.
+ * A distributed solution like Upstash Redis is recommended for production.
+ * const ratelimit = new Ratelimit({
+ *   redis: Redis.fromEnv(),
+ *   limiter: Ratelimit.slidingWindow(5, "60 s"),
+ * });
+ */
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 5;
 const hits = new Map<string, number[]>();
@@ -22,6 +32,12 @@ function rateLimited(ip: string): boolean {
 
 export async function POST(request: NextRequest) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+
+  // const { success } = await ratelimit.limit(ip);
+  // if (!success) {
+  //   // ... handle rate limit exceeded
+  // }
+
   if (rateLimited(ip)) {
     return NextResponse.json(
       { error: "Too many requests. Please try again shortly." },

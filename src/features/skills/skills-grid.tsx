@@ -39,12 +39,12 @@ function SkillRow({ skill }: { skill: Skill }) {
 }
 
 export function SkillsGrid({ skills }: { skills: Skill[] }) {
-  const groups = skills.reduce<Map<SkillCategory, Skill[]>>((map, skill) => {
-    const list = map.get(skill.category) ?? [];
+  const groups = new Map<SkillCategory, Skill[]>();
+  for (const skill of skills) {
+    const list = groups.get(skill.category) ?? [];
     list.push(skill);
-    map.set(skill.category, list);
-    return map;
-  }, new Map());
+    groups.set(skill.category, list);
+  }
 
   return (
     <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-3">

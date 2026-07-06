@@ -13,9 +13,12 @@ test.describe("Portfolio", () => {
   test("projects page filters and searches", async ({ page }) => {
     await page.goto("/projects");
     await expect(page.getByRole("heading", { name: "Projects" })).toBeVisible();
-    await page.getByRole("button", { name: "Android" }).click();
-    await expect(page.getByText(/No Android projects yet/i)).toBeVisible();
-    await page.getByRole("button", { name: "All" }).click();
+
+    // Test filtering by a category with known projects
+    await page.getByRole("button", { name: "Web" }).click();
+    await expect(page.getByText(/Stock Image Resources Website/i)).toBeVisible();
+
+    // Test search
     await page.getByPlaceholder("Search projects…").fill("wordpress");
     await expect(page.getByText(/Stock Image/i).first()).toBeVisible();
   });

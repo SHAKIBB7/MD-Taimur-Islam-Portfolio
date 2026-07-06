@@ -67,10 +67,7 @@ export function Hero({ profile, stats }: { profile: Profile; stats: HeroStat[] }
             >
               {profile.name}
             </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              className="mt-4 text-xl font-medium sm:text-2xl"
-            >
+            <motion.p variants={fadeUp} className="mt-4 text-xl font-medium sm:text-2xl">
               {profile.headline}
             </motion.p>
             <motion.p

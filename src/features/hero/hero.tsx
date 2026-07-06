@@ -24,7 +24,7 @@ export function Hero({ profile, stats }: { profile: Profile; stats: HeroStat[] }
     .slice(0, 3);
 
   return (
-    <div className="relative flex items-center overflow-hidden py-12 sm:py-16">
+    <div className="relative flex items-center overflow-hidden py-10 sm:py-14">
       {/* Background: 3D on capable devices, CSS gradient fallback otherwise */}
       <div className="absolute inset-0 -z-10" aria-hidden>
         {ready && enable3D ? (

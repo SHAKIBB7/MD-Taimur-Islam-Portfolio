@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }: Params) {
   ].filter((l): l is { label: string; url: string } => Boolean(l.url));
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-10 sm:py-12">
+    <article className="mx-auto w-full max-w-3xl px-6 py-8 sm:py-10">
       <Reveal>
         <Link
           href="/projects"

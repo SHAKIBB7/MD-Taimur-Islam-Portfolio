@@ -5,7 +5,7 @@ import { formatMonthYear } from "@/lib/utils";
 
 export function AchievementsList({ achievements }: { achievements: Achievement[] }) {
   return (
-    <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-3">
       {achievements.map((achievement) => (
         <RevealItem key={achievement.title}>
           <Card className="h-full">

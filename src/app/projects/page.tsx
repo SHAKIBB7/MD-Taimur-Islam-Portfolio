@@ -14,7 +14,7 @@ export default async function ProjectsPage() {
   const projects = await getProjects();
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-10 sm:py-12">
+    <div className="mx-auto w-full max-w-5xl px-6 py-8 sm:py-10">
       <Reveal>
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-accent">
           Portfolio

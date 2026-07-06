@@ -49,7 +49,7 @@ export default async function HomePage() {
 
       {featured.length > 0 ? (
         <Section id="featured" eyebrow="Selected Work" title="Featured Projects">
-          <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {featured.map((project) => (
               <RevealItem key={project.slug}>
                 <ProjectCard project={project} />

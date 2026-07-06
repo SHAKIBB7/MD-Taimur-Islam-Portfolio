@@ -47,7 +47,7 @@ export function SkillsGrid({ skills }: { skills: Skill[] }) {
   }
 
   return (
-    <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-3">
       {[...groups.entries()].map(([category, items]) => (
         <RevealItem key={category}>
           <Card className="h-full" hover={false}>

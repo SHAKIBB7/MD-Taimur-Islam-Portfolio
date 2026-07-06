@@ -23,7 +23,7 @@ export default async function ResumePage() {
 
   return (
     <div className="pb-12">
-      <div className="mx-auto w-full max-w-5xl px-6 pb-8 pt-10 sm:pt-12">
+      <div className="mx-auto w-full max-w-5xl px-6 pb-8 pt-8 sm:pt-10">
         <Reveal>
           <p className="mb-2 text-sm font-medium uppercase tracking-widest text-accent">
             Curriculum Vitae
@@ -72,7 +72,7 @@ export default async function ResumePage() {
 
       {certifications.length > 0 ? (
         <Section id="resume-certifications" title="Certifications" compact divider>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {certifications.map((cert) => (
               <Card key={cert.title} hover={false}>
                 <h3 className="font-semibold">{cert.title}</h3>
@@ -85,7 +85,7 @@ export default async function ResumePage() {
 
       {profile.interests.length > 0 ? (
         <Section id="resume-interests" title="Interests" compact divider>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
             {profile.interests.map((interest) => (
               <Card key={interest.title} hover={false}>
                 <h3 className="font-semibold">{interest.title}</h3>

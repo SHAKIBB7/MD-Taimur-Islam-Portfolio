@@ -57,7 +57,7 @@ export function Hero({ profile, stats }: { profile: Profile; stats: HeroStat[] }
             ) : null}
             <motion.p
               variants={fadeUp}
-              className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-accent"
+              className="mb-4 text-sm font-medium uppercase tracking-widest text-accent"
             >
               {profile.location}
             </motion.p>
@@ -84,7 +84,7 @@ export function Hero({ profile, stats }: { profile: Profile; stats: HeroStat[] }
               <ButtonLink href="/contact" variant="secondary">
                 Get in Touch
               </ButtonLink>
-              <span className="ml-1 flex items-center gap-4 text-muted-foreground">
+              <span className="ml-1 flex items-center gap-5 text-muted-foreground">
                 {profile.socials
                   .filter((s) => s.platform !== "email")
                   .map((social) => (
@@ -127,7 +127,7 @@ export function Hero({ profile, stats }: { profile: Profile; stats: HeroStat[] }
         {stats.length > 0 ? (
           <motion.dl
             variants={fadeUp}
-            className="mt-10 grid grid-cols-2 gap-6 border-t border-card-border/60 pt-6 sm:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-5 border-t border-card-border/60 pt-6 sm:grid-cols-4"
           >
             {stats.map((stat) => (
               <div key={stat.label}>

@@ -72,6 +72,8 @@ export type Skill = {
   category: SkillCategory;
   /** Proficiency 0–100; drives the level bar in the skills grid. */
   level?: number;
+  /** A brief summary of what the skill is, why it's used, and where it's applied. */
+  description?: string;
 };
 
 /** Human label for a numeric skill level. */

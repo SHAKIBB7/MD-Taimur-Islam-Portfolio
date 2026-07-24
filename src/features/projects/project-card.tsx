@@ -42,7 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
         {/* Cover: real screenshot when available, category illustration otherwise */}
         <div
           className={cn(
-            "relative flex h-36 items-center justify-center bg-gradient-to-br",
+            "relative flex h-28 items-center justify-center bg-gradient-to-br",
             COVER_TINT[project.category],
           )}
         >
@@ -75,16 +75,16 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="p-6 pt-5">
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="text-xl font-semibold">{project.title}</h3>
+        <div className="p-5 pt-4">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-lg font-semibold leading-tight">{project.title}</h3>
             <ArrowUpRightIcon
               aria-hidden
-              className="shrink-0 text-lg text-accent opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              className="mt-1 shrink-0 text-lg text-accent opacity-0 transition-opacity duration-200 group-hover:opacity-100"
             />
           </div>
-          <p className="mt-1 text-sm text-accent">{project.tagline}</p>
-          <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-1 text-xs font-medium text-accent">{project.tagline}</p>
+          <p className="mt-2.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
             {project.description}
           </p>
           <div className="mt-4 flex flex-wrap gap-1.5">

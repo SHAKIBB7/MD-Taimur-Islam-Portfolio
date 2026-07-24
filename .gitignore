@@ -29,3 +29,12 @@ prisma/*.db
 
 # personal documents (kept local only)
 *.pdf
+
+
+# pnpm and node misc
+.pnpm-store/
+node.zip
+node/
+
+# editors
+.vscode/

@@ -67,7 +67,7 @@ export function ProjectExplorer({ projects }: { projects: Project[] }) {
       </div>
 
       {filtered.length > 0 ? (
-        <ul className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2">
+        <ul className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((project) => (
             <li key={project.slug}>
               <ProjectCard project={project} />

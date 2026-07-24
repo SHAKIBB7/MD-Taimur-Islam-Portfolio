@@ -21,9 +21,25 @@ import { isDatabaseConfigured } from "@/lib/env";
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 5;
 const hits = new Map<string, number[]>();
+let requestCount = 0;
 
 function rateLimited(ip: string): boolean {
   const now = Date.now();
+  
+  // Periodic cleanup every ~100 requests to prevent memory leaks
+  requestCount++;
+  if (requestCount > 100) {
+    requestCount = 0;
+    for (const [key, timestamps] of hits.entries()) {
+      const valid = timestamps.filter((t) => now - t < WINDOW_MS);
+      if (valid.length === 0) {
+        hits.delete(key);
+      } else {
+        hits.set(key, valid);
+      }
+    }
+  }
+
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
   recent.push(now);
   hits.set(ip, recent);

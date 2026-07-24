@@ -25,7 +25,7 @@ let requestCount = 0;
 
 function rateLimited(ip: string): boolean {
   const now = Date.now();
-  
+
   // Periodic cleanup every ~100 requests to prevent memory leaks
   requestCount++;
   if (requestCount > 100) {

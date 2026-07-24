@@ -118,36 +118,216 @@ export const cvContent: PortfolioContent = {
     },
   ],
   skills: [
-    { name: "Python", category: "LANGUAGES_AND_FRAMEWORKS", level: 80, description: "A high-level programming language known for its readability. Used for backend development, AI, and automation. Applied in scalable data processing scripts and API development." },
-    { name: "Java", category: "LANGUAGES_AND_FRAMEWORKS", level: 75, description: "A robust, object-oriented language for cross-platform development. Crucial for enterprise software and Android applications. Used in building secure backend architectures and scalable applications." },
-    { name: "C", category: "LANGUAGES_AND_FRAMEWORKS", level: 75, description: "A foundational systems programming language. Ideal for low-level memory management and hardware interaction. Applied in embedded systems, performance-critical code, and operating system concepts." },
-    { name: "C++", category: "LANGUAGES_AND_FRAMEWORKS", level: 75, description: "An extension of C with object-oriented features. Essential for high-performance applications. Used in developing efficient algorithms, game engines, and resource-intensive software." },
-    { name: "JavaScript", category: "LANGUAGES_AND_FRAMEWORKS", level: 70, description: "The core scripting language for the web. Used to create dynamic and interactive user interfaces. Applied in frontend frameworks, DOM manipulation, and full-stack environments." },
-    { name: "SQL", category: "LANGUAGES_AND_FRAMEWORKS", level: 75, description: "The standard language for relational database management. Used for querying, updating, and structuring databases. Applied to ensure data integrity and optimize complex data retrieval." },
-    { name: "Bash", category: "LANGUAGES_AND_FRAMEWORKS", level: 70, description: "A Unix shell and command language. Vital for server administration and task automation. Used to write shell scripts for CI/CD pipelines and deployment automation." },
-    { name: "PowerShell", category: "LANGUAGES_AND_FRAMEWORKS", level: 70, description: "A task automation framework from Microsoft. Essential for managing Windows-based environments. Applied in system administration, Active Directory management, and OS configurations." },
-    { name: "Git & GitHub", category: "TOOLS_AND_PLATFORMS", level: 75, description: "Industry-standard version control systems. Used to track code changes and collaborate with teams. Applied in managing project history, handling branches, and continuous integration." },
-    { name: "Visual Studio Code", category: "TOOLS_AND_PLATFORMS", level: 80, description: "A highly extensible code editor. Chosen for its rich ecosystem of plugins and integrated terminal. Used daily as the primary IDE for web and script development." },
-    { name: "IntelliJ IDEA", category: "TOOLS_AND_PLATFORMS", level: 75, description: "A powerful IDE primarily for Java development. Preferred for its deep code analysis and intelligent refactoring. Used for large-scale enterprise backend systems." },
-    { name: "Visual Studio", category: "TOOLS_AND_PLATFORMS", level: 75, description: "A comprehensive IDE from Microsoft. Essential for C++ and .NET ecosystems. Applied in debugging complex systems and building native Windows applications." },
-    { name: "Android Studio", category: "TOOLS_AND_PLATFORMS", level: 70, description: "The official IDE for Google's Android operating system. Used for building, testing, and debugging mobile applications. Applied in developing cross-platform and native mobile apps." },
-    { name: "Linux (Ubuntu/Kali Linux)", category: "TOOLS_AND_PLATFORMS", level: 70, description: "Open-source operating systems for servers and security. Vital for deployment environments and penetration testing. Used for hosting applications and assessing system vulnerabilities." },
-    { name: "Windows Server", category: "TOOLS_AND_PLATFORMS", level: 65, description: "Microsoft's server operating system line. Used for enterprise network management and hosting. Applied in configuring active directories and managing internal domains." },
-    { name: "Docker", category: "TOOLS_AND_PLATFORMS", level: 70, description: "A platform for developing and running containerized applications. Ensures environments are consistent across development and production. Applied to isolate app dependencies and simplify deployment." },
-    { name: "VMware Workstation", category: "TOOLS_AND_PLATFORMS", level: 70, description: "A hypervisor for running virtual machines. Used to simulate diverse OS environments without dedicated hardware. Applied in testing software compatibility and security sandboxing." },
-    { name: "VirtualBox", category: "TOOLS_AND_PLATFORMS", level: 70, description: "A free, open-source virtualization product. Essential for isolated development environments. Used to rapidly provision and tear down test servers." },
-    { name: "Postman", category: "TOOLS_AND_PLATFORMS", level: 75, description: "An API platform for building and using APIs. Crucial for testing endpoints, payloads, and authentication. Applied in verifying RESTful service logic before frontend integration." },
-    { name: "Object-Oriented Programming (OOP)", category: "PROFESSIONAL", level: 80, description: "A programming paradigm based on 'objects' and data. Ensures code is modular, reusable, and scalable. Applied daily to structure complex software architectures robustly." },
-    { name: "Data Structures & Algorithms", category: "PROFESSIONAL", level: 75, description: "The theoretical foundation of computer science. Crucial for optimizing performance and memory usage. Applied in solving complex computational problems efficiently." },
-    { name: "Database Management Systems (DBMS)", category: "PROFESSIONAL", level: 75, description: "Systems designed to store, retrieve, and manage data. Necessary for maintaining data integrity and security. Applied in designing schemas and optimizing query execution plans." },
-    { name: "Operating Systems", category: "PROFESSIONAL", level: 70, description: "The core software that manages hardware and software resources. Essential for understanding process scheduling and memory management. Applied to write resource-efficient and system-aware applications." },
-    { name: "Computer Networks", category: "PROFESSIONAL", level: 70, description: "The architecture of interconnecting computing devices. Vital for understanding protocols, bandwidth, and latency. Applied in developing distributed systems and troubleshooting API connections." },
-    { name: "Cybersecurity Fundamentals", category: "PROFESSIONAL", level: 70, description: "Core concepts of protecting systems and networks. Crucial for defending against data breaches and exploits. Applied in writing secure code and understanding network vulnerabilities." },
-    { name: "RESTful API Development & Integration", category: "PROFESSIONAL", level: 75, description: "Designing web services using REST architectural constraints. Necessary for frontend-backend communication. Applied in building scalable microservices and integrating third-party platforms." },
-    { name: "Version Control (Git & GitHub)", category: "PROFESSIONAL", level: 75, description: "Practices for tracking and managing changes to software code. Prevents code loss and simplifies team collaboration. Applied in branching strategies, code reviews, and CI/CD." },
-    { name: "Debugging & Troubleshooting", category: "PROFESSIONAL", level: 80, description: "The process of identifying and removing errors from software. Essential for maintaining application stability and reliability. Applied systematically to resolve complex logic and runtime errors." },
-    { name: "Analytical Thinking & Problem Solving", category: "PROFESSIONAL", level: 80, description: "The ability to break down complex issues into manageable parts. Crucial for navigating undocumented edge cases. Applied to architect innovative solutions and optimize existing workflows." },
-    { name: "Team Collaboration", category: "PROFESSIONAL", level: 80, description: "Working effectively within a diverse group. Essential for delivering large projects on tight deadlines. Applied through Agile methodologies, active communication, and peer programming." },
+    {
+      name: "Python",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 80,
+      description:
+        "A high-level programming language known for its readability. Used for backend development, AI, and automation. Applied in scalable data processing scripts and API development.",
+    },
+    {
+      name: "Java",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 75,
+      description:
+        "A robust, object-oriented language for cross-platform development. Crucial for enterprise software and Android applications. Used in building secure backend architectures and scalable applications.",
+    },
+    {
+      name: "C",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 75,
+      description:
+        "A foundational systems programming language. Ideal for low-level memory management and hardware interaction. Applied in embedded systems, performance-critical code, and operating system concepts.",
+    },
+    {
+      name: "C++",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 75,
+      description:
+        "An extension of C with object-oriented features. Essential for high-performance applications. Used in developing efficient algorithms, game engines, and resource-intensive software.",
+    },
+    {
+      name: "JavaScript",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 70,
+      description:
+        "The core scripting language for the web. Used to create dynamic and interactive user interfaces. Applied in frontend frameworks, DOM manipulation, and full-stack environments.",
+    },
+    {
+      name: "SQL",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 75,
+      description:
+        "The standard language for relational database management. Used for querying, updating, and structuring databases. Applied to ensure data integrity and optimize complex data retrieval.",
+    },
+    {
+      name: "Bash",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 70,
+      description:
+        "A Unix shell and command language. Vital for server administration and task automation. Used to write shell scripts for CI/CD pipelines and deployment automation.",
+    },
+    {
+      name: "PowerShell",
+      category: "LANGUAGES_AND_FRAMEWORKS",
+      level: 70,
+      description:
+        "A task automation framework from Microsoft. Essential for managing Windows-based environments. Applied in system administration, Active Directory management, and OS configurations.",
+    },
+    {
+      name: "Git & GitHub",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 75,
+      description:
+        "Industry-standard version control systems. Used to track code changes and collaborate with teams. Applied in managing project history, handling branches, and continuous integration.",
+    },
+    {
+      name: "Visual Studio Code",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 80,
+      description:
+        "A highly extensible code editor. Chosen for its rich ecosystem of plugins and integrated terminal. Used daily as the primary IDE for web and script development.",
+    },
+    {
+      name: "IntelliJ IDEA",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 75,
+      description:
+        "A powerful IDE primarily for Java development. Preferred for its deep code analysis and intelligent refactoring. Used for large-scale enterprise backend systems.",
+    },
+    {
+      name: "Visual Studio",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 75,
+      description:
+        "A comprehensive IDE from Microsoft. Essential for C++ and .NET ecosystems. Applied in debugging complex systems and building native Windows applications.",
+    },
+    {
+      name: "Android Studio",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 70,
+      description:
+        "The official IDE for Google's Android operating system. Used for building, testing, and debugging mobile applications. Applied in developing cross-platform and native mobile apps.",
+    },
+    {
+      name: "Linux (Ubuntu/Kali Linux)",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 70,
+      description:
+        "Open-source operating systems for servers and security. Vital for deployment environments and penetration testing. Used for hosting applications and assessing system vulnerabilities.",
+    },
+    {
+      name: "Windows Server",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 65,
+      description:
+        "Microsoft's server operating system line. Used for enterprise network management and hosting. Applied in configuring active directories and managing internal domains.",
+    },
+    {
+      name: "Docker",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 70,
+      description:
+        "A platform for developing and running containerized applications. Ensures environments are consistent across development and production. Applied to isolate app dependencies and simplify deployment.",
+    },
+    {
+      name: "VMware Workstation",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 70,
+      description:
+        "A hypervisor for running virtual machines. Used to simulate diverse OS environments without dedicated hardware. Applied in testing software compatibility and security sandboxing.",
+    },
+    {
+      name: "VirtualBox",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 70,
+      description:
+        "A free, open-source virtualization product. Essential for isolated development environments. Used to rapidly provision and tear down test servers.",
+    },
+    {
+      name: "Postman",
+      category: "TOOLS_AND_PLATFORMS",
+      level: 75,
+      description:
+        "An API platform for building and using APIs. Crucial for testing endpoints, payloads, and authentication. Applied in verifying RESTful service logic before frontend integration.",
+    },
+    {
+      name: "Object-Oriented Programming (OOP)",
+      category: "PROFESSIONAL",
+      level: 80,
+      description:
+        "A programming paradigm based on 'objects' and data. Ensures code is modular, reusable, and scalable. Applied daily to structure complex software architectures robustly.",
+    },
+    {
+      name: "Data Structures & Algorithms",
+      category: "PROFESSIONAL",
+      level: 75,
+      description:
+        "The theoretical foundation of computer science. Crucial for optimizing performance and memory usage. Applied in solving complex computational problems efficiently.",
+    },
+    {
+      name: "Database Management Systems (DBMS)",
+      category: "PROFESSIONAL",
+      level: 75,
+      description:
+        "Systems designed to store, retrieve, and manage data. Necessary for maintaining data integrity and security. Applied in designing schemas and optimizing query execution plans.",
+    },
+    {
+      name: "Operating Systems",
+      category: "PROFESSIONAL",
+      level: 70,
+      description:
+        "The core software that manages hardware and software resources. Essential for understanding process scheduling and memory management. Applied to write resource-efficient and system-aware applications.",
+    },
+    {
+      name: "Computer Networks",
+      category: "PROFESSIONAL",
+      level: 70,
+      description:
+        "The architecture of interconnecting computing devices. Vital for understanding protocols, bandwidth, and latency. Applied in developing distributed systems and troubleshooting API connections.",
+    },
+    {
+      name: "Cybersecurity Fundamentals",
+      category: "PROFESSIONAL",
+      level: 70,
+      description:
+        "Core concepts of protecting systems and networks. Crucial for defending against data breaches and exploits. Applied in writing secure code and understanding network vulnerabilities.",
+    },
+    {
+      name: "RESTful API Development & Integration",
+      category: "PROFESSIONAL",
+      level: 75,
+      description:
+        "Designing web services using REST architectural constraints. Necessary for frontend-backend communication. Applied in building scalable microservices and integrating third-party platforms.",
+    },
+    {
+      name: "Version Control (Git & GitHub)",
+      category: "PROFESSIONAL",
+      level: 75,
+      description:
+        "Practices for tracking and managing changes to software code. Prevents code loss and simplifies team collaboration. Applied in branching strategies, code reviews, and CI/CD.",
+    },
+    {
+      name: "Debugging & Troubleshooting",
+      category: "PROFESSIONAL",
+      level: 80,
+      description:
+        "The process of identifying and removing errors from software. Essential for maintaining application stability and reliability. Applied systematically to resolve complex logic and runtime errors.",
+    },
+    {
+      name: "Analytical Thinking & Problem Solving",
+      category: "PROFESSIONAL",
+      level: 80,
+      description:
+        "The ability to break down complex issues into manageable parts. Crucial for navigating undocumented edge cases. Applied to architect innovative solutions and optimize existing workflows.",
+    },
+    {
+      name: "Team Collaboration",
+      category: "PROFESSIONAL",
+      level: 80,
+      description:
+        "Working effectively within a diverse group. Essential for delivering large projects on tight deadlines. Applied through Agile methodologies, active communication, and peer programming.",
+    },
   ],
   projects: [
     {
@@ -271,7 +451,14 @@ export const cvContent: PortfolioContent = {
       category: "WEB",
       status: "COMPLETED",
       featured: true,
-      technologies: ["React.js", "Next.js", "Tailwind CSS", "Markdown", "GitHub Actions", "Vercel"],
+      technologies: [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Markdown",
+        "GitHub Actions",
+        "Vercel",
+      ],
       tags: ["open source", "web", "react", "nextjs", "portfolio", "template"],
       features: [
         "Markdown/MDX support for writing blog posts",

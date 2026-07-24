@@ -17,8 +17,12 @@ function SkillRow({ skill }: { skill: Skill }) {
   return (
     <div className="group relative rounded-md transition-colors hover:bg-muted/50 p-2 -mx-2">
       <div className="flex items-baseline justify-between gap-2">
-        <span className="text-sm font-medium group-hover:text-accent transition-colors">{skill.name}</span>
-        {level != null && <span className="text-xs text-muted-foreground">{skillLevelLabel(level)}</span>}
+        <span className="text-sm font-medium group-hover:text-accent transition-colors">
+          {skill.name}
+        </span>
+        {level != null && (
+          <span className="text-xs text-muted-foreground">{skillLevelLabel(level)}</span>
+        )}
       </div>
       {level != null && (
         <div
@@ -41,7 +45,9 @@ function SkillRow({ skill }: { skill: Skill }) {
         <div className="pointer-events-none absolute left-1/2 -top-2 w-64 -translate-x-1/2 -translate-y-full scale-95 opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 z-[999]">
           <div className="relative rounded-lg border border-card-border bg-card p-3 shadow-2xl">
             <h4 className="mb-1 text-xs font-bold text-accent">{skill.name}</h4>
-            <p className="text-xs leading-relaxed text-foreground/90">{skill.description}</p>
+            <p className="text-xs leading-relaxed text-foreground/90">
+              {skill.description}
+            </p>
             {/* Arrow */}
             <div className="absolute -bottom-[5px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-card-border bg-card"></div>
           </div>
